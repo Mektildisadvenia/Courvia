@@ -1,0 +1,724 @@
+.skill-practice-page {
+  min-height: 100vh;
+  background: #f7f5f1;
+  color: #34211b;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.practice-navbar {
+  width: 90%;
+  max-width: 1400px;
+  height: 82px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(52, 33, 27, 0.12);
+}
+
+.practice-logo {
+  border: none;
+  background: transparent;
+
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 700;
+
+  color: #34211b;
+
+  cursor: pointer;
+}
+
+.practice-back {
+  border: none;
+  background: transparent;
+
+  font-size: 11px;
+  color: #7c706a;
+
+  cursor: pointer;
+}
+
+.practice-back:hover {
+  color: #ff6f52;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.practice-main {
+  width: 90%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 70px 0 100px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.practice-detail-header {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+
+  gap: 60px;
+  align-items: end;
+
+  padding-bottom: 65px;
+
+  border-bottom: 1px solid rgba(52, 33, 27, 0.12);
+}
+
+.practice-category {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #ff6f52;
+}
+
+.practice-badges {
+  display: flex;
+  gap: 8px;
+
+  margin-top: 16px;
+}
+
+.practice-badges span {
+  padding: 7px 10px;
+
+  border: 1px solid rgba(52, 33, 27, 0.14);
+
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.practice-detail-header h1 {
+  max-width: 850px;
+
+  margin: 22px 0 18px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 6vw, 76px);
+
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.practice-detail-header p {
+  max-width: 680px;
+
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.8;
+
+  color: #786c66;
+}
+
+.practice-xp-card {
+  padding: 25px;
+
+  background: #34211b;
+  color: #f7f5f1;
+
+  text-align: center;
+}
+
+.practice-xp-card span {
+  display: block;
+
+  font-size: 8px;
+  letter-spacing: 1.5px;
+
+  color: #a9cbee;
+}
+
+.practice-xp-card strong {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+
+  color: #ff6f52;
+}
+
+.practice-xp-card small {
+  font-size: 10px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.practice-content-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 80px;
+
+  padding: 75px 0;
+}
+
+.instruction-section + .instruction-section {
+  margin-top: 85px;
+}
+
+.instruction-section > span,
+.challenge-top > span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+
+  color: #ff6f52;
+}
+
+.instruction-section h2 {
+  margin: 15px 0 30px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 43px;
+
+  line-height: 1;
+}
+
+.instruction-section h2 em {
+  font-weight: 400;
+}
+
+/* =========================
+   OBJECTIVE
+========================= */
+
+.objective-list {
+  border-top: 1px solid rgba(52, 33, 27, 0.12);
+}
+
+.objective-item {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 18px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(52, 33, 27, 0.12);
+}
+
+.objective-item strong {
+  font-family: "Playfair Display", serif;
+
+  color: #a9cbee;
+}
+
+.objective-item p {
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* =========================
+   INSTRUCTION
+========================= */
+
+.instruction-box {
+  padding: 28px;
+
+  background: #a9cbee;
+
+  display: flex;
+  gap: 20px;
+}
+
+.instruction-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #34211b;
+  color: #f7f5f1;
+
+  font-size: 16px;
+}
+
+.instruction-box p {
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =========================
+   CHALLENGE
+========================= */
+
+.practice-challenge {
+  align-self: start;
+
+  padding: 38px;
+
+  background: #fffdf9;
+
+  border: 1px solid rgba(52, 33, 27, 0.12);
+
+  box-shadow:
+    0 20px 50px rgba(52, 33, 27, 0.06);
+}
+
+.challenge-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.challenge-top > div {
+  font-size: 9px;
+  font-weight: 700;
+
+  color: #91837c;
+}
+
+.practice-challenge h2 {
+  margin: 25px 0 28px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+  line-height: 1.25;
+}
+
+/* =========================
+   ANSWERS
+========================= */
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.answer-option {
+  width: 100%;
+
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border: 1px solid rgba(52, 33, 27, 0.13);
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.answer-option:hover:not(.correct):not(.wrong) {
+  background: rgba(169, 203, 238, 0.15);
+}
+
+.answer-option > span {
+  width: 27px;
+  height: 27px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1eee9;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.answer-option p {
+  flex: 1;
+
+  margin: 0;
+
+  font-size: 10px;
+}
+
+.answer-option.selected {
+  border-color: #34211b;
+  background: rgba(169, 203, 238, 0.15);
+}
+
+.answer-option.correct {
+  border-color: #79a984;
+  background: #e4f0e5;
+}
+
+.answer-option.correct > span {
+  background: #79a984;
+  color: white;
+}
+
+.answer-option.wrong {
+  border-color: #ff6f52;
+  background: #fff0ec;
+}
+
+.answer-option.wrong > span {
+  background: #ff6f52;
+  color: #34211b;
+}
+
+.answer-option strong {
+  color: #4d7957;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.submit-practice,
+.complete-practice {
+  width: 100%;
+
+  margin-top: 22px;
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border: none;
+
+  background: #34211b;
+  color: #f7f5f1;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.submit-practice:hover:not(:disabled),
+.complete-practice:hover {
+  background: #ff6f52;
+  color: #34211b;
+}
+
+.submit-practice:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.complete-practice {
+  background: #4d7957;
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.answer-feedback {
+  display: flex;
+  gap: 14px;
+
+  margin-top: 20px;
+  padding: 17px;
+
+  border: 1px solid;
+}
+
+.answer-feedback > div {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+.answer-feedback section strong {
+  font-size: 10px;
+}
+
+.answer-feedback section p {
+  margin: 5px 0 0;
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.answer-feedback.success {
+  border-color: #9fc5a5;
+  background: #eef6ef;
+}
+
+.answer-feedback.success > div {
+  background: #79a984;
+  color: white;
+}
+
+.answer-feedback.error {
+  border-color: #ffc3b5;
+  background: #fff1ed;
+}
+
+.answer-feedback.error > div {
+  background: #ff6f52;
+}
+
+/* =========================
+   TIP
+========================= */
+
+.practice-tip {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 25px;
+
+  background: #34211b;
+  color: #f7f5f1;
+}
+
+.tip-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #a9cbee;
+
+  color: #34211b;
+}
+
+.practice-tip span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: #a9cbee;
+}
+
+.practice-tip p {
+  max-width: 800px;
+
+  margin: 5px 0 0;
+
+  font-size: 9px;
+  line-height: 1.6;
+
+  color: #a99a93;
+}
+
+/* =========================
+   SUCCESS PAGE
+========================= */
+
+.practice-success-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: #34211b;
+}
+
+.practice-success-card {
+  width: 100%;
+  max-width: 650px;
+
+  padding: 70px 60px;
+
+  background: #f7f5f1;
+
+  text-align: center;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #a9cbee;
+
+  font-size: 28px;
+}
+
+.practice-success-card > span {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #ff6f52;
+}
+
+.practice-success-card h1 {
+  margin: 18px 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 58px;
+
+  line-height: 0.95;
+}
+
+.practice-success-card h1 em {
+  font-weight: 400;
+}
+
+.practice-success-card > p {
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  font-size: 11px;
+  line-height: 1.7;
+
+  color: #786b64;
+}
+
+.earned-xp {
+  margin: 35px auto;
+
+  padding: 18px;
+
+  max-width: 180px;
+
+  background: #34211b;
+  color: #f7f5f1;
+}
+
+.earned-xp small {
+  display: block;
+
+  font-size: 7px;
+  letter-spacing: 1.5px;
+
+  color: #a9cbee;
+}
+
+.earned-xp strong {
+  display: block;
+
+  margin-top: 5px;
+
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+
+  color: #ff6f52;
+}
+
+.practice-success-card button {
+  min-width: 230px;
+
+  padding: 15px 18px;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
+
+  border: none;
+
+  background: #34211b;
+  color: #f7f5f1;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.practice-success-card button:hover {
+  background: #ff6f52;
+  color: #34211b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .practice-detail-header {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-xp-card {
+    width: 180px;
+  }
+
+  .practice-content-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .practice-navbar,
+  .practice-main {
+    width: 92%;
+  }
+
+  .practice-main {
+    padding-top: 45px;
+  }
+
+  .practice-detail-header h1 {
+    font-size: 48px;
+  }
+
+  .practice-content-layout {
+    padding: 50px 0;
+  }
+
+  .practice-challenge {
+    padding: 25px;
+  }
+
+  .instruction-section h2 {
+    font-size: 37px;
+  }
+
+  .practice-success-card {
+    padding: 50px 25px;
+  }
+
+  .practice-success-card h1 {
+    font-size: 45px;
+  }
+}

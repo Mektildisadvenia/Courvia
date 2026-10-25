@@ -1,0 +1,745 @@
+/* =========================================
+   COURVIA DASHBOARD
+   ========================================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f7f5f1;
+  color: #34211b;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.dashboard-header {
+  width: 100%;
+  height: 78px;
+  padding: 0 6vw;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #f7f5f1;
+  border-bottom: 1px solid rgba(52, 33, 27, 0.12);
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.dashboard-logo {
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  color: #34211b;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.dashboard-logo:hover {
+  color: #ff6f52;
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.dashboard-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.dashboard-nav button {
+  position: relative;
+
+  border: none;
+  background: transparent;
+  padding: 8px 0;
+
+  color: #34211b;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.dashboard-nav button::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1.5px;
+
+  background: #ff6f52;
+
+  transition: width 0.25s ease;
+}
+
+.dashboard-nav button:hover {
+  color: #ff6f52;
+  transform: translateY(-1px);
+}
+
+.dashboard-nav button:hover::after {
+  width: 100%;
+}
+
+/* =========================================
+   PROFILE BUTTON
+   ========================================= */
+
+.dashboard-profile-button {
+  border: 1px solid rgba(52, 33, 27, 0.2);
+  background: transparent;
+
+  padding: 11px 18px;
+  border-radius: 100px;
+
+  color: #34211b;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.dashboard-profile-button:hover {
+  background: #34211b;
+  border-color: #34211b;
+  color: #f7f5f1;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.dashboard-main {
+  width: min(1350px, 88%);
+  margin: 0 auto;
+  padding: 85px 0 100px;
+}
+
+/* =========================================
+   WELCOME
+   ========================================= */
+
+.dashboard-welcome {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.dashboard-eyebrow {
+  display: block;
+  margin-bottom: 22px;
+
+  color: #7e8da0;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.dashboard-welcome h1 {
+  max-width: 900px;
+
+  margin: 0 0 24px;
+
+  color: #34211b;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(56px, 6vw, 92px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.dashboard-welcome p {
+  margin: 0;
+
+  color: #806f68;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   EXPLORE BUTTON
+   ========================================= */
+
+.dashboard-explore {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  min-width: 230px;
+
+  border: none;
+  border-radius: 100px;
+
+  padding: 16px 22px;
+
+  background: #34211b;
+  color: #f7f5f1;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dashboard-explore span {
+  font-size: 20px;
+  transition: transform 0.25s ease;
+}
+
+.dashboard-explore:hover {
+  background: #ff6f52;
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(52, 33, 27, 0.15);
+}
+
+.dashboard-explore:hover span {
+  transform: translateX(5px);
+}
+
+/* =========================================
+   STATISTICS
+   ========================================= */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-bottom: 100px;
+
+  border-top: 1px solid rgba(52, 33, 27, 0.13);
+  border-bottom: 1px solid rgba(52, 33, 27, 0.13);
+}
+
+.dashboard-stat-card {
+  min-height: 190px;
+
+  padding: 35px 32px;
+
+  box-sizing: border-box;
+}
+
+.dashboard-stat-card + .dashboard-stat-card {
+  border-left: 1px solid rgba(52, 33, 27, 0.13);
+}
+
+.dashboard-stat-card span {
+  display: block;
+
+  margin-bottom: 30px;
+
+  color: #7e8da0;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.dashboard-stat-card strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #34211b;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.dashboard-stat-card small {
+  color: #9a8982;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.dashboard-section {
+  margin-top: 30px;
+}
+
+.dashboard-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.dashboard-section-heading > div span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #7e8da0;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.dashboard-section-heading h2 {
+  margin: 0;
+
+  color: #34211b;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.dashboard-section-heading button {
+  border: none;
+  background: transparent;
+
+  color: #34211b;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dashboard-section-heading button:hover {
+  color: #ff6f52;
+  transform: translateX(4px);
+}
+
+/* =========================================
+   COURSE GRID
+   ========================================= */
+
+.dashboard-course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.dashboard-course-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 380px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(52, 33, 27, 0.1);
+  border-radius: 18px;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.dashboard-course-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(52, 33, 27, 0.18);
+
+  box-shadow:
+    0 18px 45px rgba(52, 33, 27, 0.09);
+}
+
+/* =========================================
+   COURSE TOP
+   ========================================= */
+
+.dashboard-course-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.dashboard-course-top > span:first-child {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 11px;
+
+  border-radius: 100px;
+
+  background: #a9cbee;
+
+  color: #34211b;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.dashboard-course-top .course-completed {
+  color: #4d8063;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================================
+   COURSE CONTENT
+   ========================================= */
+
+.dashboard-course-card h3 {
+  margin: 0 0 13px;
+
+  color: #34211b;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.dashboard-course-card > p {
+  margin: 0 0 28px;
+
+  color: #887873;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   PROGRESS
+   ========================================= */
+
+.dashboard-course-progress {
+  margin-top: auto;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 9px;
+}
+
+.progress-info span {
+  color: #887873;
+  font-size: 11px;
+}
+
+.progress-info strong {
+  color: #34211b;
+  font-size: 12px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 6px;
+
+  overflow: hidden;
+
+  border-radius: 100px;
+
+  background: #ebe7e2;
+}
+
+.progress-fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #ff6f52;
+
+  transition: width 0.5s ease;
+}
+
+/* =========================================
+   SCORE
+   ========================================= */
+
+.dashboard-course-score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  padding-top: 17px;
+
+  border-top: 1px solid rgba(52, 33, 27, 0.08);
+}
+
+.dashboard-course-score span {
+  color: #887873;
+  font-size: 11px;
+}
+
+.dashboard-course-score strong {
+  color: #34211b;
+  font-size: 13px;
+}
+
+/* =========================================
+   COURSE BUTTON
+   ========================================= */
+
+.dashboard-course-card > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #34211b;
+  border-radius: 100px;
+
+  background: transparent;
+  color: #34211b;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.dashboard-course-card > button span {
+  font-size: 17px;
+
+  transition: transform 0.25s ease;
+}
+
+.dashboard-course-card > button:hover {
+  background: #34211b;
+  color: #f7f5f1;
+
+  transform: translateY(-2px);
+}
+
+.dashboard-course-card > button:hover span {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   EMPTY STATE
+   ========================================= */
+
+.dashboard-empty {
+  padding: 60px 30px;
+
+  text-align: center;
+
+  border: 1px dashed rgba(52, 33, 27, 0.2);
+  border-radius: 18px;
+}
+
+.dashboard-empty p {
+  margin: 0;
+
+  color: #887873;
+}
+
+/* =========================================
+   LOADING
+   ========================================= */
+
+.dashboard-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #34211b;
+
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  .dashboard-header {
+    padding: 0 4vw;
+  }
+
+  .dashboard-main {
+    width: 90%;
+  }
+
+  .dashboard-welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-explore {
+    width: 230px;
+  }
+
+  .dashboard-course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .dashboard-header {
+    height: auto;
+    min-height: 70px;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding: 18px 5%;
+  }
+
+  .dashboard-nav {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 22px;
+  }
+
+  .dashboard-profile-button {
+    margin-left: auto;
+  }
+
+  .dashboard-main {
+    width: 90%;
+    padding-top: 55px;
+  }
+
+  .dashboard-welcome {
+    margin-bottom: 55px;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 52px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-stat-card {
+    min-height: auto;
+  }
+
+  .dashboard-stat-card + .dashboard-stat-card {
+    border-left: none;
+    border-top: 1px solid rgba(52, 33, 27, 0.13);
+  }
+
+  .dashboard-course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .dashboard-nav {
+    gap: 14px;
+  }
+
+  .dashboard-nav button {
+    font-size: 12px;
+  }
+
+  .dashboard-profile-button {
+    padding: 9px 13px;
+    font-size: 11px;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 43px;
+  }
+
+  .dashboard-stat-card {
+    padding: 28px 22px;
+  }
+
+  .dashboard-course-card {
+    padding: 22px;
+  }
+
+}

@@ -1,0 +1,647 @@
+/* =====================================================
+   COURVIA - COURSE DETAIL
+   ===================================================== */
+
+.course-detail-page {
+  min-height: 100vh;
+  background: #f7f5f1;
+  color: #34211b;
+  font-family: "DM Sans", sans-serif;
+}
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.detail-navbar {
+  height: 90px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e4ddd7;
+
+  background: #f7f5f1;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.detail-logo {
+  border: none;
+  background: transparent;
+
+  padding: 0;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  color: #34211b;
+
+  cursor: pointer;
+}
+
+.detail-logo span {
+  color: #ff6f52;
+}
+
+.back-course-button {
+  border: none;
+  background: transparent;
+
+  color: #34211b;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.back-course-button:hover {
+  color: #ff6f52;
+
+  transform: translateX(-4px);
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.detail-hero {
+  width: 86%;
+  max-width: 1400px;
+
+  margin: auto;
+
+  min-height: 570px;
+
+  display: grid;
+
+  grid-template-columns: 1.4fr 0.6fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding: 80px 0;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+   ===================================================== */
+
+.detail-hero-content {
+  position: relative;
+}
+
+.detail-category {
+  display: inline-block;
+
+  padding: 9px 16px;
+
+  background: #a9cbee;
+
+  color: #34211b;
+
+  border-radius: 30px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.detail-number {
+  position: absolute;
+
+  right: 0;
+  top: -20px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 150px;
+
+  line-height: 1;
+
+  color: rgba(169, 203, 238, 0.35);
+
+  pointer-events: none;
+}
+
+.detail-hero h1 {
+  position: relative;
+
+  max-width: 850px;
+
+  margin: 30px 0 20px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(55px, 7vw, 100px);
+
+  line-height: 0.92;
+
+  letter-spacing: -3px;
+
+  color: #34211b;
+}
+
+.detail-hero p {
+  position: relative;
+
+  max-width: 650px;
+
+  margin-bottom: 35px;
+
+  color: #756b65;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   START BUTTON
+   ===================================================== */
+
+.start-learning-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 17px 25px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #34211b;
+
+  color: white;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.start-learning-button span {
+  font-size: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.start-learning-button:hover {
+  background: #ff6f52;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 30px rgba(255, 111, 82, 0.25);
+}
+
+.start-learning-button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =====================================================
+   PROGRESS CARD
+   ===================================================== */
+
+.detail-progress-card {
+  min-height: 330px;
+
+  padding: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  background: #a9cbee;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 25px 60px rgba(52, 33, 27, 0.08);
+
+  transform: rotate(2deg);
+
+  transition: 0.4s ease;
+}
+
+.detail-progress-card:hover {
+  transform:
+    rotate(0deg)
+    translateY(-8px);
+}
+
+.progress-card-label {
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #34211b;
+
+  opacity: 0.7;
+}
+
+.detail-progress-card strong {
+  margin: 15px 0 25px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 90px;
+
+  line-height: 1;
+
+  color: #34211b;
+}
+
+.detail-progress {
+  width: 100%;
+
+  height: 9px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.detail-progress div {
+  height: 100%;
+
+  background: #ff6f52;
+
+  border-radius: 20px;
+
+  transition: width 0.8s ease;
+}
+
+.detail-progress-card p {
+  margin-top: 15px;
+
+  color: #34211b;
+
+  font-size: 12px;
+
+  opacity: 0.65;
+}
+
+
+/* =====================================================
+   INFORMATION SECTION
+   ===================================================== */
+
+.course-information {
+  padding: 110px 7%;
+
+  background: #34211b;
+
+  color: white;
+}
+
+.information-heading {
+  max-width: 800px;
+
+  margin-bottom: 70px;
+}
+
+.information-heading > span {
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #a9cbee;
+}
+
+.information-heading h2 {
+  margin: 18px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(50px, 6vw, 80px);
+
+  line-height: 0.95;
+
+  color: white;
+}
+
+.information-heading h2 em {
+  color: #ff6f52;
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   INFORMATION GRID
+   ===================================================== */
+
+.information-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  margin-bottom: 90px;
+}
+
+.information-item {
+  padding: 30px 25px;
+
+  border-right:
+    1px solid rgba(255, 255, 255, 0.18);
+}
+
+.information-item:first-child {
+  padding-left: 0;
+}
+
+.information-item:last-child {
+  border-right: none;
+}
+
+.information-item span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  font-weight: 800;
+}
+
+.information-item strong {
+  color: white;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   ROADMAP
+   ===================================================== */
+
+.learning-roadmap {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.roadmap-item {
+  min-height: 230px;
+
+  padding: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.roadmap-item:hover {
+  transform: translateY(-8px);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-color: rgba(169, 203, 238, 0.6);
+}
+
+.roadmap-item.active {
+  background: #a9cbee;
+
+  border-color: #a9cbee;
+}
+
+.roadmap-item.active .roadmap-number {
+  background: #34211b;
+
+  color: white;
+}
+
+.roadmap-item.active span,
+.roadmap-item.active h3,
+.roadmap-item.active p {
+  color: #34211b;
+}
+
+.roadmap-number {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 35px;
+
+  border-radius: 50%;
+
+  background: #ff6f52;
+
+  color: white;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 16px;
+}
+
+.roadmap-item span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #a9cbee;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.roadmap-item h3 {
+  margin: 0 0 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  color: white;
+}
+
+.roadmap-item p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+  .detail-hero {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding: 70px 0;
+  }
+
+  .detail-progress-card {
+    max-width: 500px;
+
+    transform: rotate(0);
+  }
+
+  .information-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .information-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .learning-roadmap {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .detail-navbar {
+    padding: 0 5%;
+  }
+
+  .detail-logo {
+    font-size: 24px;
+  }
+
+  .back-course-button {
+    font-size: 11px;
+  }
+
+  .detail-hero {
+    width: 90%;
+
+    padding: 60px 0;
+  }
+
+  .detail-number {
+    font-size: 90px;
+
+    top: 0;
+  }
+
+  .detail-hero h1 {
+    font-size: 55px;
+
+    letter-spacing: -2px;
+  }
+
+  .detail-hero p {
+    font-size: 14px;
+  }
+
+  .detail-progress-card {
+    min-height: 280px;
+
+    padding: 28px;
+  }
+
+  .detail-progress-card strong {
+    font-size: 70px;
+  }
+
+  .course-information {
+    padding: 80px 5%;
+  }
+
+  .information-heading h2 {
+    font-size: 48px;
+  }
+
+  .information-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .information-item {
+    border-right: none;
+
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.18);
+
+    padding-left: 0;
+  }
+
+  .information-item:last-child {
+    border-bottom: none;
+  }
+
+  .learning-roadmap {
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,599 @@
+.webinar-certificate-page {
+  min-height: 100vh;
+  background: #f7f5f1;
+  color: #34211b;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.certificate-navbar {
+  height: 76px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(52, 33, 27, 0.08);
+  background: rgba(247, 245, 241, 0.95);
+  backdrop-filter: blur(14px);
+}
+
+.certificate-logo {
+  color: #34211b;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.certificate-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.certificate-nav a {
+  position: relative;
+  color: #34211b;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.certificate-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  background: #ff6f52;
+  transition: 0.25s ease;
+}
+
+.certificate-nav a:hover::after,
+.certificate-nav a.active::after {
+  width: 100%;
+}
+
+.certificate-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a9cbee;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.certificate-main {
+  width: min(1120px, 88%);
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+
+.certificate-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 35px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #34211b;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.certificate-back:hover {
+  color: #ff6f52;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.certificate-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.certificate-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #ff6f52;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.certificate-header h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.certificate-header h1 em {
+  color: #ff6f52;
+  font-weight: 400;
+}
+
+.certificate-header p {
+  max-width: 570px;
+  margin: 17px 0 0;
+  color: rgba(52, 33, 27, 0.55);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.certificate-status {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  background: #e5f0df;
+  color: #42633c;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* =========================
+   CERTIFICATE PAPER
+========================= */
+
+.certificate-wrapper {
+  padding: 35px;
+  border-radius: 20px;
+  background: #34211b;
+  box-shadow: 0 25px 60px rgba(52, 33, 27, 0.15);
+}
+
+.certificate-paper {
+  position: relative;
+  overflow: hidden;
+  min-height: 610px;
+  padding: 10px;
+  background: #f7f5f1;
+}
+
+.certificate-paper-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 588px;
+  padding: 55px 60px;
+  border: 1px solid rgba(52, 33, 27, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* =========================
+   DECORATION
+========================= */
+
+.certificate-corner {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border: 2px solid #a9cbee;
+}
+
+.certificate-corner.top-left {
+  top: -55px;
+  left: -55px;
+  border-radius: 50%;
+}
+
+.certificate-corner.top-right {
+  top: -55px;
+  right: -55px;
+  border-radius: 50%;
+}
+
+.certificate-corner.bottom-left {
+  bottom: -55px;
+  left: -55px;
+  border-radius: 50%;
+}
+
+.certificate-corner.bottom-right {
+  bottom: -55px;
+  right: -55px;
+  border-radius: 50%;
+}
+
+.certificate-mark {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a9cbee;
+  color: #34211b;
+}
+
+.certificate-small-title {
+  color: rgba(52, 33, 27, 0.45);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.certificate-paper h2 {
+  margin: 8px 0 15px;
+  font-family: "Playfair Display", serif;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.certificate-presented {
+  margin: 0;
+  color: rgba(52, 33, 27, 0.5);
+  font-size: 11px;
+}
+
+.certificate-name {
+  margin-top: 12px;
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  font-style: italic;
+  color: #34211b;
+}
+
+.certificate-line {
+  width: 280px;
+  height: 1px;
+  margin: 8px auto 18px;
+  background: rgba(52, 33, 27, 0.2);
+}
+
+.certificate-description {
+  max-width: 460px;
+  margin: 0;
+  color: rgba(52, 33, 27, 0.5);
+  font-size: 11px;
+}
+
+.certificate-webinar-title {
+  max-width: 650px;
+  margin: 13px 0 28px;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* =========================
+   META
+========================= */
+
+.certificate-meta {
+  width: min(650px, 100%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(52, 33, 27, 0.12);
+}
+
+.certificate-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.certificate-meta span {
+  color: rgba(52, 33, 27, 0.4);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.certificate-meta strong {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.certificate-footer {
+  width: min(650px, 100%);
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(52, 33, 27, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.certificate-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.certificate-brand strong {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+}
+
+.certificate-brand span {
+  color: rgba(52, 33, 27, 0.42);
+  font-size: 8px;
+}
+
+.certificate-verification {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #42633c;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.certificate-actions {
+  margin-top: 20px;
+  padding: 22px 25px;
+  border: 1px solid rgba(52, 33, 27, 0.08);
+  border-radius: 14px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.certificate-action-info {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.action-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5f0df;
+  color: #42633c;
+}
+
+.certificate-action-info strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.certificate-action-info p {
+  margin: 0;
+  color: rgba(52, 33, 27, 0.5);
+  font-size: 10px;
+}
+
+.certificate-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.download-certificate,
+.dashboard-certificate-button {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.download-certificate {
+  border: none;
+  background: #34211b;
+  color: white;
+}
+
+.download-certificate:hover {
+  background: #ff6f52;
+}
+
+.dashboard-certificate-button {
+  border: 1px solid rgba(52, 33, 27, 0.15);
+  background: transparent;
+  color: #34211b;
+}
+
+.dashboard-certificate-button:hover {
+  background: #34211b;
+  color: white;
+}
+
+/* =========================
+   NOT FOUND
+========================= */
+
+.webinar-certificate-not-found {
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #34211b;
+}
+
+.webinar-certificate-not-found h1 {
+  margin: 15px 0 8px;
+  font-family: "Playfair Display", serif;
+}
+
+.webinar-certificate-not-found p {
+  max-width: 450px;
+  color: rgba(52, 33, 27, 0.55);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.webinar-certificate-not-found a,
+.webinar-certificate-not-found button {
+  margin-top: 15px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #34211b;
+  color: white;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+  .certificate-navbar,
+  .certificate-back,
+  .certificate-header,
+  .certificate-actions {
+    display: none !important;
+  }
+
+  .webinar-certificate-page {
+    background: white;
+  }
+
+  .certificate-main {
+    width: 100%;
+    padding: 0;
+  }
+
+  .certificate-wrapper {
+    padding: 0;
+    background: white;
+    box-shadow: none;
+  }
+
+  .certificate-paper {
+    min-height: 100vh;
+  }
+
+  .certificate-paper-inner {
+    min-height: calc(100vh - 20px);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+  .certificate-nav {
+    display: none;
+  }
+
+  .certificate-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .certificate-wrapper {
+    padding: 15px;
+  }
+
+  .certificate-paper-inner {
+    padding: 45px 25px;
+  }
+
+  .certificate-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .certificate-brand {
+    align-items: center;
+  }
+
+  .certificate-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .certificate-buttons {
+    width: 100%;
+  }
+
+  .download-certificate,
+  .dashboard-certificate-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .certificate-main {
+    width: 90%;
+  }
+
+  .certificate-header h1 {
+    font-size: 40px;
+  }
+
+  .certificate-paper h2 {
+    font-size: 40px;
+  }
+
+  .certificate-name {
+    font-size: 27px;
+  }
+
+  .certificate-webinar-title {
+    font-size: 21px;
+  }
+
+  .certificate-buttons {
+    flex-direction: column;
+  }
+}
